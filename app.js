@@ -20,6 +20,7 @@ fetch(endpoint)
    });
 
 function findMatches(wordToMatch, allBreeds) {
+   arrayValuesAsOption();
    return allBreeds.filter((breed) => {
       const regex = new RegExp(wordToMatch, "gi");
       return breed.match(regex);
@@ -44,7 +45,7 @@ function displayMatches() {
       el.addEventListener("click", (e) => {
          const eTargetValue = e.target.innerText;
          showDogImg(eTargetValue);
-         searchInput.value = eTargetValue;
+         searchInput.value = "";
          suggestions.innerHTML = "";
       });
    });
@@ -71,6 +72,12 @@ function showDogImg(target) {
             console.log(resp.message);
             showDog.innerHTML = `<img src="${resp.message}"/>`;
          });
+   }
+}
+
+function arrayValuesAsOption() {
+   for (let value in allBreeds) {
+      console.log(allBreeds[value]);
    }
 }
 

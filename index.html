@@ -4,13 +4,17 @@
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>DOG API Playground</title>
+      <link href="/dist/output.css" rel="stylesheet" />
       <script src="app.js" defer></script>
    </head>
    <body>
-      <form class="search-form">
-         <input type="text" class="search" placeholder="Enter dog breed" />
-         <ul class="suggestions"></ul>
-      </form>
-      <div class="show-dog"></div>
+      <div class="container mx-auto flex flex-col items-center my-6 p-4">
+         <h2 class="pb-6">Search for random dog photo</h2>
+         <form class="search-form border flex flex-col w-64">
+            <input type="text" class="search" placeholder="Search dog breed" />
+         </form>
+         <ul class="suggestions mt-6"></ul>
+         <div class="show-dog"></div>
+      </div>
    </body>
 </html>
