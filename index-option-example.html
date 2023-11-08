@@ -39,9 +39,9 @@
                   if (resp.message[key].length > 0) {
                      res += resp.message[key]
                         .map(
-                           (subreed) =>
-                              `<option value="${key}/${subreed}">
-                            ${capitalize(subreed + " " + key)}
+                           (subBreed) =>
+                              `<option value="${key}/${subBreed}">
+                            ${capitalize(subBreed + " " + key)}
                         </option>`
                         )
                         .join("");
